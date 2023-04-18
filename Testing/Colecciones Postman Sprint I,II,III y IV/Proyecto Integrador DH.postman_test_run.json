@@ -1,0 +1,575 @@
+{
+	"id": "1243ccc7-bc8e-47c7-ac03-f81b42791435",
+	"name": "Proyecto Integrador DH",
+	"timestamp": "2023-03-07T23:26:56.828Z",
+	"collection_id": "23249476-37f64cec-635b-4607-bf16-0b6213748b2f",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 14,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-03-07T23:26:47.464Z",
+	"totalFail": 13,
+	"results": [
+		{
+			"id": "db739b1a-d9a1-431d-a3ee-3fa441aca36b",
+			"name": "ImageSave",
+			"url": "http://localhost:8080/images/save\n",
+			"time": 20,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 201": false,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Status code is 201": false,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "563fe03f-fb1c-4358-8b33-995c8f0e9ae6",
+			"name": "Listar Imagenes",
+			"url": "http://localhost:8080/images/findProductsWithImages/6",
+			"time": 1959,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				1959
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": false
+				}
+			]
+		},
+		{
+			"id": "2b70237a-e024-4080-8919-c9170c2587f7",
+			"name": "Agregar Categoria",
+			"url": "http://localhost:8080/Categories/save",
+			"time": 11,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "da046238-68fe-4ca7-9224-d56547750763",
+			"name": "Listar",
+			"url": "http://localhost:8080/categories/list\n",
+			"time": 11,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "6ded90ac-33ff-48a7-9331-11c8055d5f82",
+			"name": "Modificar Categoria",
+			"url": "http://localhost:8080/categories/modify/2\n",
+			"time": 757,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				757
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "8b9a1382-6b94-48c5-87ac-e79c559f6050",
+			"name": "Borrar Categoria",
+			"url": "http://localhost:8080/categories/delete/8\n",
+			"time": 1527,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 1000ms": false,
+				"Body matches string": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 1000ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Body matches string": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				1527
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 1000ms": false,
+					"Body matches string": false
+				}
+			]
+		},
+		{
+			"id": "7ee2e4f4-ed57-4f4d-9139-7a0d471a70ce",
+			"name": "FindCiudades",
+			"url": "http://localhost:8080/cities/list\n",
+			"time": 13,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "cafe5701-5625-41a0-94c2-6d9138192dbf",
+			"name": "Product List",
+			"url": "http://localhost:8080/products/list\n",
+			"time": 9,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "57b4ad5e-c6b3-40e3-bff7-3737793c33a6",
+			"name": "ProductFindById",
+			"url": "http://localhost:8080/products/find/6\n",
+			"time": 2032,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2032
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": false
+				}
+			]
+		},
+		{
+			"id": "c9058554-aaf3-4b81-afd1-e721af5888bd",
+			"name": "ProductListRandom",
+			"url": "http://localhost:8080/products/listRandom\n",
+			"time": 14,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "7b3b2d07-a32e-4007-a5a4-901a1158d9e3",
+			"name": "ProductListByCity",
+			"url": "http://localhost:8080/products/listForCity/balcarce\n",
+			"time": 162,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "1c5f02da-a780-4eb2-9d75-6194bcbaa952",
+			"name": "Listar por Categoria",
+			"url": "http://localhost:8080/products/listByCategory/hoteles\n",
+			"time": 768,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				768
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "9987ad44-47d3-4640-8576-8070f8b7abfe",
+			"name": "ProductSave",
+			"url": "http://localhost:8080/products/save\n",
+			"time": 9,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 201": false,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 201": false,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "700f529a-3a1c-4012-a8e0-7eeb53d64b48",
+			"name": "Listar Categoria",
+			"url": "http://localhost:8080/Categories/list",
+			"time": 12,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d6a8e88d-a213-45ca-b59b-e100969f3a5e",
+			"name": "Modificar",
+			"url": "http://localhost:8080/Categories/update/{id}",
+			"time": 14,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4a7aafc3-5b2b-49f4-914e-3ec7598bce9f",
+			"name": "Borrar",
+			"url": "http://localhost:8080/Categories/delete/{id}",
+			"time": 9,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 7327,
+	"collection": {
+		"requests": [
+			{
+				"id": "db739b1a-d9a1-431d-a3ee-3fa441aca36b",
+				"method": "POST"
+			},
+			{
+				"id": "563fe03f-fb1c-4358-8b33-995c8f0e9ae6",
+				"method": "GET"
+			},
+			{
+				"id": "2b70237a-e024-4080-8919-c9170c2587f7",
+				"method": "POST"
+			},
+			{
+				"id": "da046238-68fe-4ca7-9224-d56547750763",
+				"method": "GET"
+			},
+			{
+				"id": "6ded90ac-33ff-48a7-9331-11c8055d5f82",
+				"method": "PUT"
+			},
+			{
+				"id": "8b9a1382-6b94-48c5-87ac-e79c559f6050",
+				"method": "DELETE"
+			},
+			{
+				"id": "7ee2e4f4-ed57-4f4d-9139-7a0d471a70ce",
+				"method": "GET"
+			},
+			{
+				"id": "cafe5701-5625-41a0-94c2-6d9138192dbf",
+				"method": "GET"
+			},
+			{
+				"id": "57b4ad5e-c6b3-40e3-bff7-3737793c33a6",
+				"method": "GET"
+			},
+			{
+				"id": "c9058554-aaf3-4b81-afd1-e721af5888bd",
+				"method": "GET"
+			},
+			{
+				"id": "7b3b2d07-a32e-4007-a5a4-901a1158d9e3",
+				"method": "GET"
+			},
+			{
+				"id": "1c5f02da-a780-4eb2-9d75-6194bcbaa952",
+				"method": "GET"
+			},
+			{
+				"id": "9987ad44-47d3-4640-8576-8070f8b7abfe",
+				"method": "POST"
+			},
+			{
+				"id": "700f529a-3a1c-4012-a8e0-7eeb53d64b48",
+				"method": "GET"
+			},
+			{
+				"id": "d6a8e88d-a213-45ca-b59b-e100969f3a5e",
+				"method": "PUT"
+			},
+			{
+				"id": "4a7aafc3-5b2b-49f4-914e-3ec7598bce9f",
+				"method": "DELETE"
+			}
+		]
+	}
+}
