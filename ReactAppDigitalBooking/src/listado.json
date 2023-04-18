@@ -1,0 +1,58 @@
+[
+    {
+        "img": "https://images.pexels.com/photos/5661024/pexels-photo-5661024.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        "category": "HOSTAL",
+        "title": "Malibú Hostel",
+        "location": "Mar de plata",
+        "description": "Tomcat singapura yet thai. Cornish rex cheetah for lynx siamese munchkin donskoy."
+    },
+    {
+        "img": "https://images.pexels.com/photos/237371/pexels-photo-237371.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        "category": "HOTEL",
+        "title": "Gran Hotel",
+        "location": "Buenos aires",
+        "description": "Lynx birman so panther so tom, but tomcat for malkin. Maine coon kitten. Malkin munchkin so bengal."
+    },
+    {
+        "img": "https://images.pexels.com/photos/1776574/pexels-photo-1776574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "category": "DEPARTAMENTO",
+        "title": "Luna azul",
+        "location": "Córdoba",
+        "description": "Munchkin siberian and malkin lion but american shorthair but balinese ."
+    },
+    {
+        "img": "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "category": "HOTEL",
+        "title": "Hotel Grizzly",
+        "location": "Santa Fe",
+        "description": "Manx tomcat so panther for singapura yet scottish fold and maine coony."
+    },
+    {
+        "img": "https://images.pexels.com/photos/3705536/pexels-photo-3705536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "category": "HOSTAL",
+        "title": "La Costa",
+        "location": "Mar de plata",
+        "description": "Siberian leopard or leopard and maine coon so cornish rex maine coon."
+    },
+    {
+        "img": "https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+        "category": "BED AND BREAKFAST",
+        "title": "Posada del Sol",
+        "location": "Mar de plata",
+        "description": "Leopard. American bobtail ocelot tomcat american shorthair. Tomcat leopard ocicat for savannah kitten. Thai siamese, maine coon for donskoy, maine coon so bengal. Tom himalayan puma norwegian forest."
+    },
+    {
+        "img": "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "category": "DEPARTAMENTO",
+        "title": "Palace Hotel",
+        "location": "Manizales",
+        "description": "Turkish angora ragdoll donskoy, so singapura and malkin munchkin or tomcat. American bobtail burmese bombay so panther russian blue so cornish rex but panther. Puma cougar for devonshire rex kitty cougar abyssinian ."
+    },
+    {
+        "img": "https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "category": "BED AND BREAKFAST",
+        "title": "Dream beach",
+        "location": "Medellin",
+        "description": "Puma persian so singapura kitty but russian blue for american bobtail or abyssinian . Cougar leopard ragdoll balinese so havana brown devonshire rex and persian. Tiger balinese or cougar. Donskoy ocelot and maine coon siberian for tabby. Maine coon thai siberian for cheetah but balinese "
+    }
+]
