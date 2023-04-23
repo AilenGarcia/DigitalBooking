@@ -22,10 +22,10 @@ import java.net.URLConnection;
 @Configuration
 public class UploadImageToS3 {
 
-    private static final String BUCKET_NAME = "grupo1-digitalbooking-img";
-    private static final String ACCESS_KEY = "AKIASDYGBXDR2XH5JKJK";
-    private static final String SECRET_KEY = "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";
-    private static final String REGION = "us-east-2";
+    private static final String BUCKET_NAME = "****";
+    private static final String ACCESS_KEY = "****";
+    private static final String SECRET_KEY = "****";
+    private static final String REGION = "***";
 
 
 
