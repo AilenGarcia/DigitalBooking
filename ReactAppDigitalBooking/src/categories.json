@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Hostales",
+        "description": "HOSTAL",
+        "img": "https://images.pexels.com/photos/3705536/pexels-photo-3705536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "title": "Hoteles",
+        "description": "HOTEL",
+        "img": "https://images.pexels.com/photos/237371/pexels-photo-237371.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+    },
+    {
+        "title": "Departamentos",
+        "description": "DEPARTAMENTO",
+        "img": "https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+        "title": "Bed and breakfast",
+        "description": "BED AND BREAKFAST",
+        "img": "https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+    }
+]
