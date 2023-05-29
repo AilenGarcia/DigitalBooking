@@ -1,0 +1,8 @@
+// La app está diseñada para ser vista en:
+// DESKTOP: 1440px de ancho y 90%
+// TABLET: Ipad Mini (768px de ancho) y 75%
+// MOBILE: Mobile M (375px de ancho) y 75%
+
+// Dependencias a instalar
+// npm i react-router-dom
+// npm install react-dates moment --save 

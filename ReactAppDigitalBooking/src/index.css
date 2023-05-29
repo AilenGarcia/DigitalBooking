@@ -1,0 +1,1707 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F9F9F9;
+  color: #383B58;
+  min-height: 100vh;
+  /* height: 72.7vh; */
+}
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  align-items: center;
+  padding: 1rem 3.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 15vh;
+}
+nav{
+  display: flex;
+}
+header .navBtn{
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color:#545776;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+header h3{
+  visibility: hidden;
+}
+.headerButtons{
+  color: #1DBEB4;
+  background-color: #FFFFFF;
+  border: 2px solid #1DBEB4;
+  padding: 1rem 1.65rem;
+  border-radius: 8px;
+  font-family: 'Poppins';
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 10rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.headerButtons:hover {
+  color: #FFFFFF;
+}
+
+.headerButtons:after {
+  content: "";
+  background: #1DBEB4;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0);
+  transition: all 0.3s ease;
+}
+
+.headerButtons:hover:after {
+  transition: all 0.3s ease-out;
+  transform: scale(1, 1);
+}
+
+.loginRight{
+  position: relative;
+  right: -12.45rem;
+}
+.LogoMob{
+  display: none;
+}
+.LogoTab{
+  display: none;
+}
+.MenuLogo{
+  display: none;
+}
+.imgPerfil{
+  background-color: #383B58;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgPerfil p{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nameUser{
+  color:#1DBEB4
+}
+
+.userBox{
+  display: flex;
+  width: 250px;
+  gap: 15px;
+  position: relative;
+  left: 10rem;
+}
+
+.adminBox{
+  display: flex;
+  width: 400px;
+  gap: 15px;
+  position: relative;
+  left: 10rem;
+}
+.adminBox h5{
+  border-right: 1px solid #383B58;
+  padding: 1rem;
+  color: #383B58;
+}
+.buttons {
+  width: 25vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 19rem;
+}
+
+.bookingsMobileMenus1{
+  display: none;
+  font-weight: 'bolder';
+  text-decoration: 'none'
+}
+
+.invisible{
+  display: none;
+}
+
+.searcher {
+  background-color: #545776;
+  color: #FFFFFF;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.inputs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.75rem;
+  width: 56.5rem;
+}
+/* date picker search */
+.datePicker{
+  padding: 0.5rem 15rem 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: 'Poppins';
+  font-size: 0.9rem;
+  color: #7F7F7F;
+  border:none;
+  margin-right: 12px;
+}
+.datePickerCalendar {
+  padding: 1px;
+  margin: 10px 40px;
+  }
+.datePickerSearch .react-datepicker .react-datepicker__header{
+  border-bottom: none;
+  background-color: white;
+}
+.datePickerSearch .react-datepicker__month-container{
+  margin: 8px;
+  padding: 10px;
+  max-height: 700px;
+  }
+.datePickerSearch .react-datepicker .react-datepicker__current-month{
+  margin: 8px;
+}
+.datePickerSearch .react-datepicker .react-datepicker__day-name{
+  margin: 6px;
+  font-weight: 700;
+  gap: 5px;
+}
+.datePickerSearch .react-datepicker .react-datepicker__day{
+  margin: 6px;
+}
+
+  .datePickerSearch .react-datepicker .react-datepicker__day--in-range{
+    background-color: #1DBEB4;
+    opacity: 0.8;
+    color: white;
+    border-radius: 50%;
+  }
+
+  .datePickerSearch .react-datepicker__close-icon{
+    padding-right: 1.25rem;
+  }
+
+/* .......... */
+.buscar{
+  color: #FFFFFF;
+  background-color: #1DBEB4;
+  align-self: center;
+  padding: 0.5rem 8.5rem 0.5rem 4rem;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  width: 10rem;
+  cursor: pointer;
+  border: none;
+}
+.selectLugar{
+  padding: 0.5rem 15rem 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: 'Poppins';
+  font-size: 0.9rem;
+  color: #7F7F7F;
+  border:none;
+  margin-right: 0.75rem;
+}
+
+.footer {
+  display: flex;
+  background-color: #1DBEB4;
+  color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+  bottom: 0;
+  width: 100vw;
+  left: 0;
+  position: sticky;
+  bottom: 0;
+  height: 10vh;
+}
+
+.logosFooter {
+  width: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logosFooter img {
+  width: 2rem;
+}
+.logosMobile{
+  display: none;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-bottom: 10.6rem; */
+}
+
+.closeLogin {
+  align-self: flex-end;
+  padding: 0 5rem 0 0;
+  color: #1DBEB4;
+  font-size: 1.75rem;
+  font-weight: bolder;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.closeLogin p:hover {
+  transform: scale(1.15, 1.15);
+}
+.login {
+ margin-bottom: .35em;
+ height: 75vh;
+}
+
+.login h1 {
+  color: #1DBEB4;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.loginCampos {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.loginCampos span {
+  color: #383B58;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+.loginCampos p {
+  color: #FF0000;
+  font-size: 0.6rem;
+  align-self: flex-end;
+}
+.loginCampos .msgerror{
+  align-self: center;
+  font-size: 0.75rem;
+  
+
+}
+.login input {
+  width: 28rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #383B58;
+  margin-bottom: 1rem;
+  box-shadow: 7px 9px 10px -7px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 7px 9px 10px -7px rgba(0,0,0,0.25);
+  -moz-box-shadow: 7px 9px 10px -7px rgba(0,0,0,0.25);
+}
+
+.login .ingresar {
+  color: #FFFFFF;
+  background-color: #1DBEB4;
+  align-self: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 8rem 0.5rem 3rem;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.login .ingresar:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.registro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 0 5.5rem;
+  font-size: 0.99rem;
+}
+
+.registro .registroBoton:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0.6rem;
+}
+
+.signup h1 {
+  color: #1DBEB4;
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.signupCampos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signup input {
+ /**CAMBIO PARA QUE SE RENDERICE BIEN EN PANTALLA DE KAREN*/
+  width: 32rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1.25rem;
+  color: #383B58;
+  margin-bottom: 1rem;
+  box-shadow: 7px 9px 10px -7px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 7px 9px 10px -7px rgba(0,0,0,0.25);
+  -moz-box-shadow: 7px 9px 10px -7px rgba(0,0,0,0.25);
+}
+.error{
+  background-color: #FFE1E1;
+}
+.ok{
+  background-color: #d3f2dc;
+}
+.nombreApellido {
+  display: flex;
+  padding-left: 2rem;
+}
+.datoInput, .dato2Input{
+  display: flex;
+  flex-direction: column;
+}
+
+.dato2Input input {
+  /* padding-right: 31rem; */
+  color: #383B58;
+}
+.datoInput input{
+  width: 87%;
+}
+.dato2Input p {
+  color: #FF0000;
+  font-size: .6rem;
+  align-self: flex-end;
+}
+.datoInput p{
+  color: #FF0000;
+  font-size: .6rem;
+  align-self: flex-end;
+  padding-right: 2.25rem;
+}
+.signup .crearCuenta {
+  color: #FFFFFF;
+  background-color: #1DBEB4;
+  align-self: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 11rem 0.5rem 3.5rem;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.signup .crearCuenta:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.linkLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 8.75rem;
+  font-size: 0.95rem;
+}
+
+.linkLogin .linkloginBoton:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.tituloHome{
+  left: 3.5rem;
+    position: relative;
+}
+.categoriesList .tituloCategory{
+width: 100vw;
+margin-top: 1.5rem;
+}
+.containerList{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  align-content: space-around;
+  justify-content: center;
+}
+
+/* card */
+.card{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin: 14px;
+	max-width: 835px;
+  width: 46%;
+  height: 283px;
+  display: flex;
+  background-color: #FFFFFF;
+}
+.cardImg{ 
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.imageCard{ 
+  height: 100%;
+  border-radius: 10px;
+}
+.heartIcon{
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+	text-align: left;
+  width: 50%;
+  max-height: 283px;
+  color: #383B58;
+}
+.cardDetails button, .btnSuccessful, .goBackBtn{
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #1DBEB4;
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  border-style: none;
+}
+.cardDetails h1{
+  font-size: 24px
+}
+.cardDetails p{
+  font-weight: 500;
+  font-size: 14px;
+}
+.cardDetails p img{
+  height: 50%;
+  padding-right: 5px;
+}
+.cardDescription{
+  overflow:hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+}
+.location{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.categoriesList{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.categoryCard{
+  width: 310px;
+  height: 270px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin: 14px;
+  background-color: #FFFFFF;
+}
+
+.categoryCard img{
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.booking{  
+  display: flex;
+  align-items: center;
+}
+.calendar{
+  background-color: #ececec;
+  padding: 1rem 0;
+  margin: 1.5rem 0;
+}
+.calendar h1{
+  padding: .5rem 3.60rem;
+  font-size: 1.5rem;
+}
+.datePickerCalendar {
+  padding: 1px;
+  margin: 10px 40px;
+  }
+.datePickerCalendar .react-datepicker .react-datepicker__header{
+  border-bottom: none;
+  background-color: white;
+}
+.datePickerCalendar .react-datepicker__month-container{
+  margin: 8px;
+  padding: 10px;
+  max-height: 700px;
+  }
+  .datePickerCalendar .react-datepicker .react-datepicker__navigation{
+    top: 140px;
+    background-color: #1DBEB4;
+    color: white;
+    border-radius: 50%;
+    margin: 20px;
+    }
+.datePickerCalendar .react-datepicker .react-datepicker__current-month{
+  margin: 8px;
+}
+.datePickerCalendar .react-datepicker .react-datepicker__day-name{
+  margin: 6px;
+  font-weight: 700;
+  gap: 5px;
+}
+.datePickerCalendar .react-datepicker .react-datepicker__day{
+  margin: 6px;
+}
+.datePickerCalendar .react-datepicker{
+  width: 750px; 
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  margin: 20px;
+  }
+
+  .datePickerCalendar .react-datepicker .react-datepicker__day--in-range{
+    background-color: #1DBEB4;
+    opacity: 0.8;
+    color: white;
+    border-radius: 50%;
+  }
+
+.reservationBlock { 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  background-color: white;
+}
+.reservationBlock p{
+  font-weight: 600;
+}
+.reservationBlock button{
+padding: 10px;
+margin-top: 35px;
+background-color: #1DBEB4;
+color: #FFFFFF;
+font-weight: 700;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+border-radius: 5px;
+border-style: none;
+width: 100%;
+}
+.datePickerMobile{display: none;}
+.datePickerSearchMobile{display: none;}
+.headerProduct {
+  background-color: #545776;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 3.25rem;
+}
+
+.dataProduct h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.dataProduct h2 {
+  font-size: 1.5rem;
+}
+
+.goBack {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
+
+.locationProduct {
+  background-color: #ececec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3.25rem;
+  font-weight: 600;
+}
+
+.locationProduct .locationInfo {
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.locationProduct .locationInfo .iconLocation {
+  padding-top: 0.25rem;
+  padding-right: 0.5rem;
+}
+
+.locationProduct .punctuation {
+  width: 11vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locationProduct .punctuation .colum1{
+  text-align: center;
+}
+
+.locationProduct .punctuation .star {
+  color: #1DBEB4;
+}
+
+.locationProduct .punctuation .star .noColor {
+  color: #a0a0a0;
+}
+
+.locationProduct .punctuation .punctuationNumber {
+  background-color: #545776;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10%;
+}
+
+.descriptionProduct, .characteristicsProduct, .politicsProduct {
+  padding: 1rem 3.25rem;
+}
+
+.descriptionProduct h2, .characteristicsProduct h2, .politicsProduct h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.descriptionProduct h3 {
+  font-size: 1rem;
+}
+.info{
+    border-top: #1DBEB4 1.5px solid;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 1rem;
+}
+.characteristicsProduct ul {
+  border-top: #1DBEB4 1.5px solid;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  column-count: 4;
+}
+
+/* .politicsProduct ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.politicsProduct p {
+  border-top: #1DBEB4 1.5px solid;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+} */
+.characteristicsProduct ul li, .politicsProduct .info ul li, .politicsProduct .info ul .politicsTitle{
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.politicsProduct .info .politicsTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+/* maps */
+.leaflet-container {
+  width: 92%;
+  height: 60vh;
+  overflow: hidden;
+  margin: auto;
+}
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+  z-index: -0;
+}
+.leaflet-container .leaflet-pane{
+  width: 90%;
+  height: 60vh;
+}
+.mapaProduct{
+  margin: 2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.cardContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cardUserBooking{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	margin: 14px;
+  width: 20rem;
+  height: 25.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  margin-top: 4.25rem;
+  margin-bottom: 4.25rem;
+}
+.imgBooking{
+  object-fit: cover;
+  border-radius: 10px;
+}
+.cardContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem;
+  grid-gap: 0.5rem;
+}
+.buttonBooking{
+  border-radius: 0.8rem;
+  color:#FFFFFF;
+  background-color:#1DBEB4; 
+  border-color: #1DBEB4;
+  border-style: none;
+  width: 10rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+}
+.emptyBooking{
+  height: 65.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.emptyBookingContent{
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+padding: 5rem;
+grid-gap: 0.5rem;
+}
+.faTriangle{
+font-size: 2.5rem;
+}
+.goBackBtn{
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 736px){
+  header .navBtn:hover{
+    transform: none;
+  }
+
+  /* .datePicker .react-datepicker__close-icon{
+    /*!ACÁ DEBERÍA CORREGIRSE LA ALTURA DEL BOTON DE CIERRA DE CALENDAR EN MOBILE*/
+  } */
+
+  .loading{
+    height: 70vh;
+  }
+  /* home cards */
+  .tituloHome{
+    font-size: 1.3rem;
+    left: 1.5rem;
+    width: 350px;
+
+  }
+  .containerList{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 491px;
+  }
+  .cardImg{ 
+    width: 100%;
+    height: 50%;
+    position: relative;
+  }
+  .imageCard{
+    width: 100%;
+  }
+  .cardDetails {
+    height: 50%;
+    width: 100%;
+  }
+  .cardDescription{
+    -webkit-line-clamp: 2;
+  }
+  .location{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .categoryCard{
+    width: 90%;
+    height: 60%;
+  }
+  .cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* searcher */
+  .searcher h1{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .selectLugar{
+    padding: 0.5rem 12.5rem 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0px;
+  }
+  .datePicker{
+    padding: 0.5rem 10.5rem 0.5rem 1.2rem;
+    margin-bottom: 0.5rem;
+    margin-left:0px;
+    position: relative;
+    left: 0.4rem;
+  }
+  .buscar{
+    padding: 0.5rem 13.5rem 0.5rem 9.3rem;
+  }
+  .datePickerMobile{display: inline;}
+  .datePickerCalendar{display: none;}
+  .datePickerSearch{display: none;}
+  .datePickerSearchMobile{display: inline;}
+  .datePickerMobile {
+    padding: 1px;
+    margin: auto;
+    }
+  .datePickerMobile .react-datepicker .react-datepicker__header{
+    border-bottom: none;
+    background-color: white;
+  }
+  .datePickerMobile .react-datepicker__month-container{
+    margin: 8px;
+    padding: 10px;
+    max-height: 700px;
+    }
+    .datePickerMobile .react-datepicker .react-datepicker__navigation{
+      top: 140px;
+      color: white;
+      border-radius: 50%;
+      }
+  .datePickerMobile .react-datepicker .react-datepicker__current-month{
+    margin: 8px;
+  }
+  .datePickerMobile .react-datepicker .react-datepicker__day-name{
+    margin: 6px;
+    font-weight: 700;
+    gap: 5px;
+  }
+  .datePickerMobile .react-datepicker .react-datepicker__day{
+    margin: 6px;
+  }
+  .datePickerMobile .react-datepicker{
+    width: 350px; 
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    margin: auto;
+      z-index: -0;
+    }
+  
+    .datePickerMobile .react-datepicker .react-datepicker__day--in-range{
+      background-color: #383B58;
+      opacity: 0.8;
+      color: white;
+    }
+
+
+    .datePickerSearchMobile .react-datepicker .react-datepicker__header{
+      border-bottom: none;
+      background-color: white;
+    }
+    .datePickerSearchMobile .react-datepicker__month-container{
+      margin: 8px;
+      padding: 10px;
+      max-height: 700px;
+      }
+      .datePickerSearchMobile .react-datepicker .react-datepicker__navigation{
+        top: 140px;
+        color: white;
+        border-radius: 50%;
+        }
+    .datePickerSearchMobile .react-datepicker .react-datepicker__current-month{
+      margin: 8px;
+    }
+    .datePickerSearchMobile .react-datepicker .react-datepicker__day-name{
+      margin: 6px;
+      font-weight: 700;
+      gap: 5px;
+    }
+    .datePickerSearchMobile .react-datepicker .react-datepicker__day{
+      margin: 6px;
+    }
+    .datePickerSearchMobile .react-datepicker{
+      width: 350px; 
+      display: flex;
+      justify-content: center;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      border: none;
+      margin: auto;
+      margin-left: 1rem;
+      }
+    
+      .datePickerSearchMobile .react-datepicker .react-datepicker__day--in-range{
+        background-color: #383B58;
+        opacity: 0.8;
+        color: white;
+      }
+  
+
+    .imagesProduct .galery{display: none;}
+    .imagesProduct .btn-modal{display: none;}
+    .imagesProduct .carrousel_mobile{
+      display: block;
+      justify-self: center;
+      align-self: center;
+      margin:20px 0px;
+    }
+    .imagesProduct .carrousel_mobile .carousel.carousel-slider{
+      z-index: 0;
+    }
+    .imagesProduct .carrousel_mobile .carousel .carousel-status{
+      right: 0;
+      top: 0;
+  }
+  .characteristicsProduct ul{
+    column-count: 2;
+  }
+
+@media only screen and (min-width: 320px) and (max-width: 736px){
+  .LogoMob{
+    display: flex;
+    position: relative;
+    right: 5rem;
+  }
+  .LogoTab{
+    display: none;
+  }
+  header{
+    padding: 1rem;
+  }
+  nav h3{
+    visibility: visible;
+    color: white;
+    position: absolute;
+    top: 6rem;
+    right: 1.6rem
+  }
+  nav .buttons{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 17rem;
+    margin-left: 0;
+  }
+  .headerButtons{
+    color: black;
+    background-color: #FFFFFF;
+    border: none;
+  }
+  header nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #1DBEB4;
+    gap: 1.5rem;
+    transition: 1s;
+    transform: translateY(-150vh);
+  }
+  .mobileMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 7rem;
+  }
+  header .navBtn{
+    visibility: visible;
+    opacity: 1;
+  }
+  header .responsiveNav{
+    transform: none;
+  }
+  nav .navCloseBtn{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: #FFFFFF;
+  }
+
+.menubuttons{
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: white;
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    bottom: 0rem;
+
+} 
+.buttons{
+    border: 0;
+    color: #383B58;
+}
+.logosMobile{
+display: block;
+position: relative;
+top: 30rem;
+left: 13.5rem;
+}
+.loginRight{
+  position: relative;
+  right: 0;
+}
+.logosFooter{
+  display: none;
+}
+.footer h5{
+  display: flex;
+  justify-content: center;
+}
+
+  .inputs{
+    flex-direction: column;
+    justify-content: center;
+    width: 63vw;
+  }
+  .MenuLogo{
+    display:flex;
+    align-self: flex-end;
+  }
+  .LogoDesk{
+    display: none;
+  }
+
+  .MenuLogo{
+    padding-left: 10rem;
+    align-self: flex-end;
+  }
+  .header{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    position: relative;
+    transition: 0.5s height ease-in-out;
+  }
+  .navbar{
+    height: 100vh;
+  }
+  .navbar .headerButtons{
+    position: absolute;
+    top:120px;
+    left:0;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .toggle-icons{
+    color:#383B58;
+    display: block;
+    position:absolute;
+    top:28px;
+    right: 20px;
+  }
+  .login {
+    flex-direction: column ;
+    justify-content: center;
+    height: 115vh;
+  }
+  .login input{
+    width: 90vw;
+  }
+  .closeLogin{
+    justify-content: center;
+    margin-right: 1rem;
+    padding: 0;
+  }
+  .registro{
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  .loginCampos{
+    width: 100vw;
+    margin-top: 20px;
+    padding-left:20px;
+  }
+
+  .footer{
+    flex-direction: column;
+  }
+  .userBox{
+    left: 9rem;
+    margin-top: 1rem;
+  }
+
+.SuccessfulBooking div, .SuccessfulProduct div{
+    padding: 0;
+    width: 85%;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 736px){
+  .footer {
+    margin-top: 20px;
+  }
+
+
+  .emptyBookingContent{
+    width: 340px;
+    height: 300px;
+  }
+
+  .emptyBookingContent h3{
+    text-align: center;
+    width: 330px;
+  }
+  
+  .errorBookingLogIn {
+    position: relative;
+    bottom: 20px;
+    margin-top: 0;
+  }
+  .errorBookingLogIn p {
+    font-size: 0.65rem;
+  }
+  .signupCampos input{
+    width: 80vw;
+  }
+  .nombreApellido{
+    flex-direction: column;
+  }
+  .signupCampos{
+    padding-left: 20px;
+  }
+  .linkLogin {
+    flex-direction: column ;
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+  .linkLogin p {
+    text-align: center;
+  }
+  .nombreApellido {
+    padding-left: 0;
+  }
+  .dato2Input input{
+    padding-right: 1.5rem;
+  }
+  .booking{
+    flex-direction: column;
+  }
+  .reservationBlock{
+    width: 80%;
+    box-shadow: none;
+    align-items: center;
+    background-color: #ececec
+  }
+  .reservationBlock button{
+    width: 100%;
+  }
+  .locationProduct .locationInfo {
+    width: 50vw;
+    overflow:hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+  }
+    .locationProduct {
+      padding: 1rem}
+      .locationProduct .punctuation {
+        width: 28vw;}
+        .info{
+          grid-template-columns: 1fr;
+        }
+        .calendar h1{
+          margin-left: 0;
+          font-size: 1.5rem;
+          padding: 1rem;
+        }
+}
+@media only screen and (min-width: 736px) and (max-width: 876px){
+  /* home */
+  .LogoDesk{
+    display: none;
+  }
+  .LogoTab{
+    display: flex;
+    position: relative;
+    width: 5rem;
+  }
+  header{
+    padding: 1.5rem 3.5rem;
+  }
+  .login2{
+    position: relative;
+  }
+  .loginTablet{
+    right: -10.5rem;
+  }
+.searcher h1{
+  font-size: 1.8rem;
+}
+.selectLugar{
+  padding: 0.6rem 3rem 0.6rem 1rem;
+  position: relative;
+  left: 6rem;
+  border-radius: 0.3rem;
+}
+.datePicker{
+  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+  position: relative;
+  left: -0.7rem;
+  border-radius: 0.3rem;
+}
+.buscar{
+  padding: 0.6rem 3rem 0.6rem 3rem;
+  position: relative;
+  right: 7.3rem;
+  border-radius: 0.3rem;
+}
+.card{
+  width:100%
+}
+/* login */
+.login{
+  margin-bottom: 0px;
+  /* height: 51.5rem; */
+}
+.login h1{
+  font-size: 1.8rem;
+  /* position: relative; */
+  bottom: 8rem;
+}
+.login .closeLogin{
+  /* position: relative; */
+  bottom: 12rem;
+}
+.login .ingresar{
+  padding: 0.5rem 16.5rem 0.5rem 11.5rem;
+  margin-bottom: 1.5rem;
+}
+/* createacc */
+.signup{
+  margin-bottom: 0px;
+  height:51.5rem;
+}
+.signup h1{
+  font-size: 1.8rem;
+  position: relative;
+  bottom: 4rem;
+}
+.signup .closeLogin{
+  position: relative;
+  bottom: 4rem;
+}
+.signup .nombreApellido{
+  display: block;
+}
+.datoInput input{
+  width: 28rem;
+  position: relative;
+  right:1rem ;
+}
+.signup .crearCuenta{
+  padding: 0.5rem 17.5rem 0.5rem 10.5rem;
+  margin-bottom: 1.5rem;
+}
+.linkloginBoton{
+  margin-left: 0.5rem;
+}
+
+.botoniniciar{
+  display: none;
+}
+.logosFooter{
+  width: 25vw;
+}
+
+.booking{
+  flex-direction: column;
+}
+
+.reservationBlock {
+  flex-direction: row;
+  width: 100%;
+  box-shadow: none;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ececec
+}
+
+.reservationBlock button{
+  margin-top: 0;
+  width: 100%;
+}
+
+  /* carrusel */
+  .imagesProduct .galery{display: none;}
+  .imagesProduct .btn-modal{display: none;}
+  .imagesProduct .carrousel_mobile{
+    display: block;
+    justify-self: center;
+    align-self: center;
+    margin:20px 0px;
+  }
+  .imagesProduct .carrousel_mobile .carousel .carousel-status{
+    right: 0;
+    top: 0;
+}
+.characteristicsProduct ul{
+  column-count: 2;
+}
+.locationProduct .locationInfo {
+  width: 50vw;}
+  .locationProduct .punctuation {
+    width: 17vw;}
+    .calendar .calendar{
+      margin: 0;
+    }
+    .userBox {
+      display: flex;
+      position: relative;
+      left: 9rem;
+  }
+  .buttons {
+    gap: 1rem;
+    margin-left: 0;
+    margin-right: 2rem;
+}
+.inputs{
+  width: 62rem;
+}
+.info{
+  grid-template-columns: 1fr 1fr;
+}
+.adminBox{
+  left: 9rem;
+}
+.calendar h1{
+  margin-left: 0;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.dato2Input input {
+  width:28rem;
+  color: #383B58;
+}
+.loading{
+  height: 70vh;
+}
+}
+
+/* carrusel */
+.galery img{
+  border-radius: 10px;
+}
+
+.carrousel_mobile{
+  display: none;
+}
+
+.galery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem 4rem;
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+.galery .single-image img{
+  max-width: 100%;
+  height: 455px;
+}
+
+.galery .multiple-images {
+  /* background-color: yellow; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.galery .multiple-images img {
+  max-width: 100%;
+  height: 218px;
+}
+
+.cardDetails button, .sercher .buscar, .goBack, .btnSuccessful, .goBackBtn {
+  cursor: pointer;
+}
+
+.cardDetails button:hover, .buscar:hover, .goBack:hover, .btnSuccessful:hover, .goBackBtn:hover{
+  transform: scale(1.03, 1.03);
+}
+
+.goBack:hover {
+  transform: scale(1.15, 1.15);
+}
+
+.categoryCard:hover {
+  cursor: pointer;
+  transform: scale(1.03, 1.03);
+}
+.categories_star{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.categories_star .star{
+  font-size: .8rem;
+  color: #1DBEB4;
+}
+.searchResults{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  justify-content: center;
+}
+
+.itemCharacteristics {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemCharacteristics li {
+  margin-left: 0.5rem;
+}
+
+.SuccessfulBooking, .SuccessfulProduct  {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.SuccessfulBooking div, .SuccessfulProduct div {
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+  padding: 2rem;
+  font-size: 1.75rem;
+  text-align: center;
+  color: #1DBEB4;
+}
+
+.checkCircle {
+  font-size: 3.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.agradecimientoSuccessful {
+  font-weight: 600;
+}
+
+.mensajesSuccessful {
+  font-size: 1.25rem;
+  color: #383B58;
+  margin-bottom: 0.75rem;
+}
+
+.errorBookingLogIn{
+  display: flex;
+  background-color: #ffe6e6;
+  color: #B00020;
+  width: 22.5rem;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  align-items: center;
+  font-weight: 600;
+  justify-content: center;
+  margin-top: 0;
+  position: relative;
+  top: 18px;
+}
+.errorBookingLogIn .fa-circle-exclamation{
+  font-size: 1.5rem;
+  margin-right: .5rem;
+}
+#cardsNotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding-bottom: 0;
+}
+
+  @media (max-width:376px){
+  .loginCampos p{
+    width: 90vw;
+  }
+  .msgerror{
+    width: 95%;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .ingresar{
+    margin-right: 17px;
+  }
+  .responsiveNav{
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+  .adminBox{
+    flex-direction: column;
+    align-items: flex-end;
+    position:relative;
+    bottom:240px;
+    width:100%;
+    gap:4px;
+    left: -15px;
+  }
+  .adminBox a{
+    display:none
+  }
+  .adminBox h5 {
+    border-right: 0px
+  }
+  .adminBox div p{
+    text-align: end;
+  }
+  .imgPerfil{
+    background-color: #ffffff;
+    width: 38px;
+    height: 38px;
+  }
+
+  .imgPerfil p{
+    color:#383B58
+  }
+  .adminBox a h5{ padding: 0px;}
+
+.hello{
+  color:#FFFFFF;
+}
+.nameUser{color:#383B58}
+.bookinsMobileMenus{
+  color:#0000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 15px;
+  padding-top: 15px;
+  gap:15px;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  font-weight: bold;
+}
+.bookingsMobileMenus1{
+  display: flex;
+  text-decoration: none;
+  color:#383B58
+}
+  .logosMobile{
+    position:relative;
+    top: 360px;
+  }
+}
